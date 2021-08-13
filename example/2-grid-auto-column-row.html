@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        /* Initial CSS */
+        display: grid;
+        width: 900px;
+        height: 600px;
+        border: 5px solid teal;
+
+        /* Custom CSS */
+        grid-template-columns: 100px 200px;
+        grid-template-rows: 100px;
+
+        grid-auto-columns: 250px;
+        grid-auto-rows: 50px;
+
+        /* grid-auto-flow: column; */
+    }
+    .box {
+        /* Initial CSS */
+        background-color: olive;
+        color: snow;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #333;
+
+        /* Custom CSS */
+    }
+    .box.four{
+        grid-column: 3/4;
+        grid-row: 4/5;
+    }
+</style>
+
+<body>
+    <div class="container mt-10">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box four">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+</body>
+
+</html>

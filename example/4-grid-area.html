@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        /* Initial CSS */
+        display: grid;
+        width: 900px;
+        height: 600px;
+        border: 5px solid teal;
+
+        /* Custom CSS */
+
+        /* grid-template-columns: auto 150px;
+        grid-template-rows: 100px auto 70px;
+        grid-template-areas:
+        "nav nav"
+        "content sidebar"
+        "footer footer"; */
+
+        grid-template:
+        "nav nav" 100px
+        "content sidebar" auto
+        "footer footer" 70px
+        /auto 150px;
+
+    }
+    .base-style {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: snow;
+        font-weight: bold;
+        border: 1px solid #333;
+    }
+    nav {
+        background-color: olive;
+        
+        grid-area: nav;
+    }
+    section {
+        background-color: tomato;
+
+        grid-area: content;
+    }
+    aside {
+        background-color: sandybrown;
+
+        grid-area: sidebar;
+    }
+    footer {
+        background-color: cornflowerblue;
+
+        grid-area: footer;
+    }
+</style>
+
+<body>
+    <div class="container mt-10">
+        <nav class='base-style'>nav</nav>
+        <section class='base-style'>
+            content go here
+        </section>
+        <aside class='base-style'>
+            sidebar
+        </aside>
+        <footer class='base-style'>
+            footer
+        </footer>
+    </div>
+</body>
+
+</html>

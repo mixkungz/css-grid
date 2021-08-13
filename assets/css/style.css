@@ -1,0 +1,89 @@
+.container {
+  margin: 0 auto;
+}
+
+/* Navbar */
+nav {
+  background-color: #ffeaa7;
+  height: 80px;
+  font-family: "inter";
+  position: relative;
+}
+
+nav .container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+  height: 100%;
+  align-items: center;
+}
+
+nav .container .logo {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+nav .container .menu {
+  grid-column-start: 5;
+  grid-column-end: 11;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(6, calc(100% / 6));
+}
+
+nav .container .about-us {
+  grid-column-start: 6;
+}
+
+nav .container .sign-in-button {
+  grid-column-start: 11;
+  grid-column-end: -1;
+  justify-self: end;
+
+  color: white;
+  text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16),
+    0px 4px 8px rgba(38, 50, 56, 0.08);
+  background-color: #6d5ce7;
+  border-radius: 20px;
+  padding: 6px 20px;
+}
+
+/* Hero */
+.hero {
+  height: 690px;
+}
+
+/* Discover */
+#discover-experience .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 24px;
+}
+
+#discover-experience .card {
+  display: grid;
+  row-gap: 10px;
+  grid-template:
+    "image" auto
+    "card-header" auto
+    "card-desc" auto
+    "rating" auto
+    "cta" 32px
+    /100%;
+}
+
+#discover-experience .card .image {
+  grid-area: image;
+}
+#discover-experience .card .header {
+  grid-area: card-header;
+}
+#discover-experience .card .desc {
+  grid-area: card-desc;
+}
+#discover-experience .card .rating {
+  grid-area: rating;
+}
+#discover-experience .card .cta {
+  grid-area: cta;
+}

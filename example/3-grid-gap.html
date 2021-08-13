@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        /* Initial CSS */
+        display: grid;
+        width: 900px;
+        height: 600px;
+        border: 5px solid teal;
+        padding: 5px 10px;
+
+        /* Custom CSS */
+
+            /* Work with column */
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px 10px;
+            /* row-gap: 5px; */
+            /* column-gap: 10px; */
+        
+    }
+    .box {
+        /* Initial CSS */
+        background-color: olive;
+        color: snow;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #333;
+
+        /* Custom CSS */
+
+    }
+</style>
+
+<body>
+    <div class="container mt-10">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+</body>
+
+</html>
